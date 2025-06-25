@@ -4,7 +4,6 @@ import 'package:tadrib_hub/generated/S.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/layout_manager/layout_provider.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/language_provider.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/theme_provider.dart';
- // ✅ استيراد LayoutProvider
 import 'package:tadrib_hub/utils/app_router.dart';
 
 void main() {

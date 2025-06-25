@@ -1,4 +1,4 @@
-package com.example.summer_course
+package com.example.tadrib_hub
 
 import io.flutter.embedding.android.FlutterActivity
 
