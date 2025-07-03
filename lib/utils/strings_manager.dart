@@ -174,13 +174,129 @@ class AppStrings {
 
   static String excelBookTitle(BuildContext context) =>
       isArabic(context) ? 'إتقان الإكسل' : 'Excel Mastery';
+       static String choose(BuildContext context) => isArabic(context) ? 'اختر' : 'Choice';
+  static String favoriteCourse(BuildContext context) => isArabic(context) ? 'الدورة المفضلة' : 'Favorite Course';
+  static String recommendedForYou(BuildContext context) => isArabic(context) ? 'موصى لك' : 'Recommended for you';
   
+  // Course Titles
+  static String uiUxDesign(BuildContext context) => isArabic(context) ? 'تصميم واجهات' : 'UI UX DESIGN';
+  static String python(BuildContext context) => isArabic(context) ? 'بايثون' : 'Python';
+  static String eCommerce(BuildContext context) => isArabic(context) ? 'التجارة الإلكترونية' : 'E-commerce';
+  static String java(BuildContext context) => isArabic(context) ? 'جافا' : 'Java';
+  static String programming(BuildContext context) => isArabic(context) ? 'برمجة' : 'Programming';
+  static String design(BuildContext context) => isArabic(context) ? 'تصميم' : 'Design';
+  static String development(BuildContext context) => isArabic(context) ? 'تطوير' : 'Development';
+  static String business(BuildContext context) => isArabic(context) ? 'إدارة الأعمال' : 'Business';
+  static String marketing(BuildContext context) => isArabic(context) ? 'تسويق' : 'Marketing';
+  
+  // Course Descriptions
+  static String uiUxDesignDescription(BuildContext context) => isArabic(context) 
+      ? 'تعلم تصميم المواقع بطريقة احترافية تجعلك مؤهلًا للسوق.'
+      : 'Learn website design with great professionalism that will make you qualified for the labor market.';
+      
+  static String pythonDescription(BuildContext context) => isArabic(context)
+      ? 'تعلم البرمجة بلغة بايثون، تصميم قواعد البيانات، وإنشاء تطبيقات إنترنتية.'
+      : 'Learn how to code in Python, design and access databases, create interactive web applications.';
+      
+  static String eCommerceDescription(BuildContext context) => isArabic(context)
+      ? 'تعلّم إدارة الأعمال واستراتيجيات التسويق التي تُعتبر مفتاح التشغيل عبر الإنترنت.'
+      : 'Teach business management and marketing strategy skills, key to successfully operating an online business.';
+   static String javaDescription(BuildContext context) => isArabic(context)
+      ? 'دورات تغطي المهارات في البرمجة الكائنية التوجه، وتطوير البرامج، وإنشاء التطبيقات.'
+      : 'Courses that cover skills in object-oriented programming, software development, and app creation.';
+    static String cppDescription(BuildContext context) => isArabic(context)
+      ? 'تعلم أساسيات البرمجة بلغة C++ وإنشاء التطبيقات.'
+      : 'Learn the basics of C++ programming and application development.';
+       static String photoshopDescription(BuildContext context) => isArabic(context)
+      ? 'كن مبدعًا بإنشاء هوية خاصة بك.'
+      : 'Be innovative and creative by creating your own identity.';
+
+  static String illustratorDescription(BuildContext context) => isArabic(context)
+      ? 'تعلّم تصميم الخطوط وإنشاء شعارك بشكل احترافي.'
+      : 'Learn to design fonts and create your own logo professionally.';
+
+  static String xdDescription(BuildContext context) => isArabic(context)
+      ? 'أداة تصميم للمواقع والتطبيقات.'
+      : 'A vector design tool for web and mobile applications.';
+
+  static String softwareDevDescription(BuildContext context) => isArabic(context)
+      ? 'دورات تطوير البرمجيات لتتعلم كيفية إنشاء برامجك الخاصة.'
+      : 'Software development courses to learn how to create their own software programs.';
+
+  static String eBusinessDescription(BuildContext context) => isArabic(context)
+      ? 'إدارة أي عمل باستخدام الإنترنت، الإكسانترنت، الويب، والإنترانت.'
+      : 'The administration of conducting any business using the internet, extranet, web, and intranet';
+
+  static String marketingBasicDescription(BuildContext context) => isArabic(context)
+      ? 'فهم احتياجات العملاء وتلبية تلك الاحتياجات عن طريق الشركة.'
+      : 'Understanding the needs of customers, and communicating how a business meets those needs';
+       static String designDescription(BuildContext context) => isArabic(context)
+      ? 'تعلم تصميم الواجهات والرسومات باستخدام أحدث الأدوات.'
+      : 'Learn interface design and graphics using the latest tools.';
+        static String developmentDescription(BuildContext context) => isArabic(context)
+      ? 'تعلم تطوير البرمجيات والتطبيقات بمختلف أنواعها.'
+      : 'Learn software and application development of various types.';
+        static String businessDescription(BuildContext context) => isArabic(context)
+      ? 'إدارة الأعمال والتسويق الرقمي لنجاح مشروعك.'
+      : 'Business management and digital marketing for your project success.';
+      
+  static String marketingDescription(BuildContext context) => isArabic(context)
+      ? 'استراتيجيات التسويق الحديثة لتعزيز وجودك الرقمي.'
+      : 'Modern marketing strategies to enhance your digital presence.';
+
+  // Strings added for CourseDetailsPage and related widgets
+  static String hoursLeftPrice(BuildContext context) =>
+      isArabic(context) ? '11 ساعة متبقية بهذا السعر' : '11 hour left at this price';
+
+  static String studyNow(BuildContext context) =>
+      isArabic(context) ? 'ادرس الآن' : 'Study now';
+
+  static String courseIncluded(BuildContext context) =>
+      isArabic(context) ? 'هذه الدورة تتضمن' : 'This Course included';
+
+  static String bestQuality(BuildContext context) =>
+      isArabic(context) ? 'أفضل جودة' : 'The best quality';
+
+  static String accessAllDevices(BuildContext context) =>
+      isArabic(context) ? 'الوصول على جميع الأجهزة' : 'Access on all devices';
+
+  static String certificationCompletion(BuildContext context) =>
+      isArabic(context) ? 'شهادة إتمام' : 'Certification of completion';
+
+  static String modulesCount(BuildContext context, int count) =>
+      isArabic(context) ? '$count وحدة' : '$count Modules';
+
+  static String adobePhotoshop(BuildContext context) =>
+      isArabic(context) ? 'أدوبي فوتوشوب' : 'Adobe Photoshop';
+
+  static String adobeIllustrator(BuildContext context) =>
+      isArabic(context) ? 'أدوبي إليستريتور' : 'Adobe Illustrator';
+
+  static String adobeXd(BuildContext context) =>
+      isArabic(context) ? 'أدوبي XD' : 'Adobe XD';
+
+  static String eBusiness(BuildContext context) =>
+      isArabic(context) ? 'الأعمال الإلكترونية' : 'E-Business';
+
+  // Strings added for LayoutScreen (Drawer and Bottom Navigation Bar)
+  static String homeDrawerLabel(BuildContext context) => isArabic(context) ? 'الرئيسية' : 'Home';
+  static String aiDrawerLabel(BuildContext context) => isArabic(context) ? 'ذكاء اصطناعي' : 'AI';
+  static String bookDrawerLabel(BuildContext context) => isArabic(context) ? 'كتاب' : 'Book';
+  static String partnerDrawerLabel(BuildContext context) => isArabic(context) ? 'شركاء' : 'Partner';
+  static String programDrawerLabel(BuildContext context) => isArabic(context) ? 'برنامج' : 'Program';
+  static String aboutUsDrawerLabel(BuildContext context) => isArabic(context) ? 'معلومات عنا' : 'About Us';
+  static String logoutButtonLabel(BuildContext context) => isArabic(context) ? 'تسجيل الخروج' : 'Log out';
+
+  static String homeBottomNavLabel(BuildContext context) => isArabic(context) ? 'الرئيسية' : 'Home';
+  static String courseBottomNavLabel(BuildContext context) => isArabic(context) ? 'الدورات' : 'Course';
+  static String aiAssistantBottomNavLabel(BuildContext context) => isArabic(context) ? 'مساعد الذكاء الاصطناعي' : 'AI Assistant';
+  static String contactUsBottomNavLabel(BuildContext context) => isArabic(context) ? 'اتصل بنا' : 'Contact Us';
+  static String accountBottomNavLabel(BuildContext context) => isArabic(context) ? 'الحساب' : 'Account';
+
+
   static bool isArabic(BuildContext context) {
   final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
   return languageProvider.isArabic;
 
 }
- 
-
- 
 }

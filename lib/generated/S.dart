@@ -16,7 +16,7 @@ class S {
     return _current!;
   }
 
-  // 👇 أضف هذه الدالة العامة لتحديث اللغة من الخارج
+  
   static void setLocale(Locale newLocale) {
     _current = S(newLocale);
   }

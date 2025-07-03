@@ -9,6 +9,7 @@ import 'package:tadrib_hub/presentation/Screens/logIn_Screen.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/language_provider.dart';
 import 'package:tadrib_hub/utils/assets_manager.dart';
 import 'package:tadrib_hub/utils/color_manager.dart';
+import 'package:tadrib_hub/utils/strings_manager.dart'; 
 
 class LayoutScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -101,7 +102,7 @@ class LayoutScreen extends StatelessWidget {
                           children: [
                             _buildDrawerButton(
                               context: context,
-                              label: languageProvider.isArabic ? 'الرئيسية' : 'Home',
+                              label: AppStrings.homeDrawerLabel(context), 
                               onPressed: () {
                                 layoutProvider.changeBtnNav(0);
                                 Navigator.pop(context);
@@ -111,7 +112,7 @@ class LayoutScreen extends StatelessWidget {
                             ),
                             _buildDrawerButton(
                               context: context,
-                              label: languageProvider.isArabic ? 'ذكاء اصطناعي' : 'AI',
+                              label: AppStrings.aiDrawerLabel(context), 
                               onPressed: () {
                                 layoutProvider.changeBtnNav(2);
                                 Navigator.pop(context);
@@ -121,7 +122,7 @@ class LayoutScreen extends StatelessWidget {
                             ),
                             _buildDrawerButton(
                               context: context,
-                              label: languageProvider.isArabic ? 'كتاب' : 'Book',
+                              label: AppStrings.bookDrawerLabel(context), 
                               onPressed: () {
                                 layoutProvider.changeBtnNav(5);
                                 Navigator.pop(context);
@@ -131,7 +132,7 @@ class LayoutScreen extends StatelessWidget {
                             ),
                             _buildDrawerButton(
                               context: context,
-                              label: languageProvider.isArabic ? 'شركاء' : 'Partner',
+                              label: AppStrings.partnerDrawerLabel(context), 
                               onPressed: () {
                                 Navigator.pop(context); 
                                 showDialog(
@@ -147,8 +148,7 @@ class LayoutScreen extends StatelessWidget {
                             ),
                             _buildDrawerButton(
                               context: context,
-                              label:
-                                  languageProvider.isArabic ? 'برنامج' : 'Program',
+                              label: AppStrings.programDrawerLabel(context), 
                               onPressed: () {
                                 Navigator.pop(context);
                               },
@@ -157,8 +157,7 @@ class LayoutScreen extends StatelessWidget {
                             ),
                             _buildDrawerButton(
                               context: context,
-                              label:
-                                  languageProvider.isArabic ? 'معلومات عنا' : 'About Us',
+                              label: AppStrings.aboutUsDrawerLabel(context), 
                               onPressed: () {
                                 Navigator.push(
                                   context,
@@ -197,7 +196,7 @@ class LayoutScreen extends StatelessWidget {
                                 ),
                               ),
                               child: Text(
-                                languageProvider.isArabic ? 'تسجيل الخروج' : 'Log out',
+                                AppStrings.logoutButtonLabel(context), 
                                 style: TextStyle(
                                   fontSize: isPortrait ? 18 : 16,
                                   color: Colors.white,
@@ -236,7 +235,7 @@ class LayoutScreen extends StatelessWidget {
   height: 100,
   child: BottomNavigationBar(
     onTap: (index) {
-      if (index == 4) { // Account icon
+      if (index == 4) { 
         _showAccountPopup(context);
       } else {
         layoutProvider.changeBtnNav(index);
@@ -244,32 +243,32 @@ class LayoutScreen extends StatelessWidget {
     },
     selectedFontSize: 12,
     unselectedFontSize: 10,
-    currentIndex: layoutProvider.selectedIndex.clamp(0, 4), // تأكد من أن الفهرس بين 0 و4
+    currentIndex: layoutProvider.selectedIndex.clamp(0, 4),
     showSelectedLabels: true,
     backgroundColor: AppColors.white,
     type: BottomNavigationBarType.fixed,
     fixedColor: const Color(0xFF3D5CFF),
     unselectedItemColor: AppColors.iconGray,
-    items: const [ // لاحظ استخدام const هنا
+    items: [ 
       BottomNavigationBarItem(
-        icon: Icon(Icons.home_filled),
-        label: 'Home',
+        icon: const Icon(Icons.home_filled),
+        label: AppStrings.homeBottomNavLabel(context), 
       ),
       BottomNavigationBarItem(
-        icon: Icon(Icons.menu_book),
-        label: 'Course',
+        icon: const Icon(Icons.menu_book),
+        label: AppStrings.courseBottomNavLabel(context), 
       ),
       BottomNavigationBarItem(
-        icon: SizedBox(height: 0),
-        label: 'AI Assistant',
+        icon: const SizedBox(height: 0),
+        label: AppStrings.aiAssistantBottomNavLabel(context), 
       ),
       BottomNavigationBarItem(
-        icon: Icon(Icons.contact_mail),
-        label: 'Contact Us',
+        icon: const Icon(Icons.contact_mail),
+        label: AppStrings.contactUsBottomNavLabel(context), 
       ),
       BottomNavigationBarItem(
-        icon: Icon(Icons.person),
-        label: 'Account',
+        icon: const Icon(Icons.person),
+        label: AppStrings.accountBottomNavLabel(context),
       ),
     ],
   ),
