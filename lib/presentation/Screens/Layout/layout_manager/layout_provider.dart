@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/CourseDetail.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/account_popup.dart';
-import 'package:tadrib_hub/presentation/Screens/Layout/pages/ai_screen.dart';
+import 'package:tadrib_hub/presentation/Screens/Layout/pages/ai/ai_screen.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/books_home_page.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/contact_screen.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/course_screen.dart';

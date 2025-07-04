@@ -292,6 +292,15 @@ class AppStrings {
   static String aiAssistantBottomNavLabel(BuildContext context) => isArabic(context) ? 'مساعد الذكاء الاصطناعي' : 'AI Assistant';
   static String contactUsBottomNavLabel(BuildContext context) => isArabic(context) ? 'اتصل بنا' : 'Contact Us';
   static String accountBottomNavLabel(BuildContext context) => isArabic(context) ? 'الحساب' : 'Account';
+  // Add these to your AppStrings class
+  static String errorLoadingCourses(BuildContext context) => 'خطأ في تحميل الكورسات';
+  static String retry(BuildContext context) => 'إعادة المحاولة';
+  static String noCourses(BuildContext context) => 'لا توجد كورسات';
+  static String loadCourses(BuildContext context) => 'تحميل الكورسات';
+  static String seeAll(BuildContext context) => 'عرض الكل';
+  static String noTitle(BuildContext context) => 'بدون عنوان';
+  static String noDescription(BuildContext context) => 'لا يوجد وصف';
+  static String unknown(BuildContext context) => 'غير محدد';
 
 
   static bool isArabic(BuildContext context) {

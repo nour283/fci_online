@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:tadrib_hub/cubit/courses_cubit.dart';
 import 'package:tadrib_hub/generated/S.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/layout_manager/layout_provider.dart';
 import 'package:tadrib_hub/presentation/Screens/Layout/pages/language_provider.dart';
@@ -8,13 +10,21 @@ import 'package:tadrib_hub/utils/app_router.dart';
 
 void main() {
   runApp(
-    MultiProvider(
+    MultiBlocProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => ThemeProvider()),
-        ChangeNotifierProvider(create: (_) => LanguageProvider()),
-        ChangeNotifierProvider(create: (_) => LayoutProvider()), // ✅ إضافة LayoutProvider
+        BlocProvider(create: (BuildContext context) {
+          return CoursesCubit();
+        })
       ],
-      child: const MyApp(),
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => ThemeProvider()),
+          ChangeNotifierProvider(create: (_) => LanguageProvider()),
+          ChangeNotifierProvider(create: (_) => LayoutProvider()),
+          // ✅ إضافة LayoutProvider
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -30,16 +40,23 @@ class MyApp extends StatelessWidget {
         S.setLocale(Locale(languageProvider.isArabic ? 'ar' : 'en'));
 
         return MaterialApp.router(
-          key: ValueKey('${themeProvider.isDarkMode}_${languageProvider.isArabic}'),
+          key: ValueKey(
+              '${themeProvider.isDarkMode}_${languageProvider.isArabic}'),
           debugShowCheckedModeBanner: false,
           routerConfig: appRouter,
-          theme: themeProvider.isDarkMode ? ThemeData.dark() : ThemeData.light(),
+          theme:
+              themeProvider.isDarkMode ? ThemeData.dark() : ThemeData.light(),
           darkTheme: ThemeData.dark(),
-          themeMode: themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.system,
-          locale: languageProvider.isArabic ? const Locale('ar') : const Locale('en'),
+          themeMode:
+              themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.system,
+          locale: languageProvider.isArabic
+              ? const Locale('ar')
+              : const Locale('en'),
           builder: (context, child) {
             return Directionality(
-              textDirection: languageProvider.isArabic ? TextDirection.rtl : TextDirection.ltr,
+              textDirection: languageProvider.isArabic
+                  ? TextDirection.rtl
+                  : TextDirection.ltr,
               child: child ?? Container(),
             );
           },
